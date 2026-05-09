@@ -1,9 +1,10 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
-import { LayoutDashboard, CalendarDays, Settings2, LineChart, LogOut, Scissors, SlidersHorizontal } from "lucide-react";
+import { LayoutDashboard, CalendarDays, Settings2, LineChart, LogOut, SlidersHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import { BrandMark } from "@/components/BrandMark";
 
 const items = [
   { to: "/admin", end: true, label: "Dashboard", icon: LayoutDashboard },
@@ -25,11 +26,8 @@ export default function AdminLayout() {
   return (
     <div className="min-h-screen bg-background flex flex-col md:flex-row">
       <aside className="md:w-60 border-b md:border-b-0 md:border-r border-border/60 surface flex md:flex-col">
-        <div className="hidden md:flex p-6 items-center gap-2 border-b border-border/60">
-          <div className="h-8 w-8 rounded-sm border border-accent/40 grid place-items-center">
-            <Scissors className="h-4 w-4 text-accent" strokeWidth={1.5} />
-          </div>
-          <div className="font-display text-lg uppercase tracking-[0.15em]">Zeca <span className="text-accent">Adm.</span></div>
+        <div className="hidden md:flex p-4 items-center justify-center border-b border-border/60">
+          <BrandMark size="sm" to="/admin" />
         </div>
 
         <nav className="flex md:flex-col gap-1 p-2 md:p-3 flex-1 overflow-x-auto">
