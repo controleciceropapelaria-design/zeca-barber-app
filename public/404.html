@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Zeca Barbearia</title>
+    <script>
+      // Redireciona rotas do GitHub Pages para o React Router
+      var path = window.location.pathname;
+      var base = "/zeca-barber-app";
+      var route = path.replace(base, "") || "/";
+      sessionStorage.setItem("gh_redirect", route);
+      window.location.replace(base + "/");
+    </script>
+  </head>
+  <body></body>
+</html>

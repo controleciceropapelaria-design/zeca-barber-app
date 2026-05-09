@@ -2,7 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-export default defineConfig(() => ({
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/zeca-barber-app/" : "/",
   server: {
     host: "::",
     port: 8080,
