@@ -35,7 +35,7 @@ export default function Configuracoes() {
     setTimeout(() => setSaved(false), 2500);
   };
 
-  const bookingUrl = `${window.location.origin}/agendar`;
+  const bookingUrl = `${window.location.origin}${import.meta.env.BASE_URL}agendar`;
   const copyLink = async () => {
     await navigator.clipboard.writeText(bookingUrl);
     setCopied(true);

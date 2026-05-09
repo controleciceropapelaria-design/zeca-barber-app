@@ -9,7 +9,7 @@ import { getConfig } from "@/lib/useConfig";
 export default function AdminDashboard() {
   const [stats, setStats] = useState({ today: 0, revenue: 0, clients: 0 });
   const [copied, setCopied] = useState(false);
-  const bookingUrl = `${window.location.origin}/agendar`;
+  const bookingUrl = `${window.location.origin}${import.meta.env.BASE_URL}agendar`;
   const cfg = getConfig();
 
   useEffect(() => {
