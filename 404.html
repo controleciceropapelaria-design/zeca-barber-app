@@ -7,7 +7,8 @@
       // Redireciona rotas do GitHub Pages para o React Router
       var path = window.location.pathname;
       var base = "/zeca-barber-app";
-      var route = path.replace(base, "") || "/";
+      // Salva o path completo (com o base) para restaurar exato
+      var route = path.startsWith(base) ? path : (base + path);
       sessionStorage.setItem("gh_redirect", route);
       window.location.replace(base + "/");
     </script>
