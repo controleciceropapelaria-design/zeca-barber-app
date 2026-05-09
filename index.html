@@ -26,7 +26,7 @@
       // Restaura rota salva pelo 404.html do GitHub Pages
       (function () {
         var redirect = sessionStorage.getItem("gh_redirect");
-        if (redirect && redirect !== "/") {
+        if (redirect) {
           sessionStorage.removeItem("gh_redirect");
           window.history.replaceState(null, "", redirect);
         }
